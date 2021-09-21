@@ -3,6 +3,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 
 import {configureStore} from "../store/index.store";
 import Navbar from "./Navbar";
+import Main from "./Main";
 
 const store = configureStore();
 
@@ -12,6 +13,7 @@ const App = function App() {
       <Router>
         <div classNAme="onboarding">
           <Navbar />
+          <Main />
         </div>
       </Router>
     </Provider>
