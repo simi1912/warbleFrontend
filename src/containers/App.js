@@ -11,7 +11,7 @@ const App = function App() {
   return (
     <Provider store={store}>
       <Router>
-        <div classNAme="onboarding">
+        <div className="onboarding">
           <Navbar />
           <Main />
         </div>
