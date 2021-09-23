@@ -1,6 +1,7 @@
 import {Component} from "react";
 import {Switch, Route, withRouter, Redirect, Link} from "react-router-dom";
 import {connect} from "react-redux";
+import MessageTimeline from "./MessageTimeline.component";
 
 const Homepage = ( { currentUser }) => {
     if(!currentUser.isAuthenticated){
@@ -16,7 +17,10 @@ const Homepage = ( { currentUser }) => {
     } else {
         return (
             <div>
-                <h1>You made it</h1>
+                <MessageTimeline
+                    profileImageUrl={currentUser.user.profileImageUrl}
+                    username={currentUser.user.username}
+                /> 
             </div>
         )
     }
