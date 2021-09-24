@@ -4,7 +4,7 @@ import DefaultProfileImg from "../images/default-profile-image.jpg";
 import {Switch, Route, withRouter, Redirect, Link} from "react-router-dom";
 import {connect} from "react-redux";
 
-const MessageItem = ({date, profileImageUrl, text, username}) => (
+const MessageItem = ({date, profileImageUrl, text, username, removeMessage , isCorrectUser}) => (
     <div>
         <li className="list-group-item">
             <img 
@@ -24,6 +24,15 @@ const MessageItem = ({date, profileImageUrl, text, username}) => (
                 <p>
                     {text}
                 </p>
+                {isCorrectUser && ( 
+                    <a 
+                        className="btn btn-danger" 
+                        onClick={removeMessage}
+                    > 
+                        Delete 
+                    </a>
+                )}
+                
             </div>
         </li>
     </div>

@@ -13,8 +13,9 @@ export function apiCall(method, path, data){
         return axios[method.toLowerCase()](path, data)
             .then(res => 
                 resolve(res.data)
-            ).catch( e => 
-                reject(e.response.data.error)
+            ).catch( e => {
+                reject(e.response.data.error);
+            }
             );
     });
 }

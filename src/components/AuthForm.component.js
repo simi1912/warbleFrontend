@@ -34,7 +34,7 @@ class AuthForm extends Component {
     }
     
     render(){
-        const { email, username, password, profileimageUrl } = this.state;
+        const { email, username, password, profileImageUrl } = this.state;
         const { heading, buttonText, signup, errors, history,  removeError } = this.props;
         
         history.listen( () => {
@@ -70,7 +70,7 @@ class AuthForm extends Component {
                                     
                                     <label htmlFor="image-url">Image URL:</label>
                                     <input className="form-control" id="image-url" name="image-url" 
-                                        onChange={this.handleChange} value={profileimageUrl} type="text"
+                                        onChange={this.handleChange} value={profileImageUrl} type="text"
                                     />
                                 </div>
                             )}
